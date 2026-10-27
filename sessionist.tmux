@@ -28,9 +28,11 @@ source "$CURRENT_DIR/scripts/helpers.sh"
 # Multiple bindings can be set. Default binding is "g".
 set_goto_session_bindings() {
 	local key_bindings=$(get_tmux_option "$tmux_option_goto" "$default_key_bindings_goto")
+	local command
+	printf -v command '%q' "$CURRENT_DIR/scripts/goto_session.sh"
 	local key
 	for key in $key_bindings; do
-		tmux bind "$key" run "$CURRENT_DIR/scripts/goto_session.sh"
+		tmux bind "$key" run "$command #{q:client_name}"
 	done
 }
 
