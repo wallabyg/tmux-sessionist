@@ -39,7 +39,7 @@ This plugin solves the above problems.
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
 
-    set -g @plugin 'tmux-plugins/tmux-sessionist'
+    set -g @plugin 'wallabyg/tmux-sessionist'
 
 Hit `prefix + I` to fetch the plugin and source it. You can now use the plugin.
 
@@ -47,7 +47,7 @@ Hit `prefix + I` to fetch the plugin and source it. You can now use the plugin.
 
 Clone the repo:
 
-    $ git clone https://github.com/tmux-plugins/tmux-sessionist ~/clone/path
+    $ git clone https://github.com/wallabyg/tmux-sessionist ~/clone/path
 
 Add this line to the bottom of `.tmux.conf`:
 
